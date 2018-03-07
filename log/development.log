@@ -1343,3 +1343,224 @@ Processing by EventsController#edit as HTML
 Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/events/edit/2" for 127.0.0.1 at 2018-03-07 10:34:11 +0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/yumei.shih/Desktop/Practice/RoR/ruby-on-rails-simple-crud/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/yumei.shih/Desktop/Practice/RoR/ruby-on-rails-simple-crud/config/routes.rb:6)
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (0.7ms)
+  Rendered events/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:34:14 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2018-03-07 10:34:17 +0800
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (4.3ms)
+  Rendered events/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events/create" for 127.0.0.1 at 2018-03-07 10:34:19 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3RJXydluhD28lXP5QnK0mu3zir5Cn0Oi8xlNFXMDhpxBPB26WO5dRoHbVt7jTs1RncXStprK2D5fNUDD8fPXA==", "event"=>{"name"=>"", "description"=>"dcsdc"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (0.6ms)
+  Rendered events/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/events/create" for 127.0.0.1 at 2018-03-07 10:34:22 +0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qCGXSikQIQq2uDvlgzweY3psr24KFb1SFCkS25fKIsqdOf6OO/RqYoTQ9BZHb/qLeipTSqf4bVdMDnFLokSgaA==", "event"=>{"name"=>"sdcdsc", "description"=>"dcsdc"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "sdcdsc"], ["description", "dcsdc"], ["created_at", "2018-03-07 02:34:22.183676"], ["updated_at", "2018-03-07 02:34:22.183676"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:34:22 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/edit/7" for 127.0.0.1 at 2018-03-07 10:34:23 +0800
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (1.4ms)
+  Rendered events/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/events/update/7" for 127.0.0.1 at 2018-03-07 10:34:26 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Dk1Ai6fMe01aGQawvCTRsiULzIHBe9qVqjfMPypYzX4+Ap7V3DLcxqCKhAQV72hQHi1BNI4SA8iyxYt0U2N+Q==", "event"=>{"name"=>"", "description"=>"dcsdc"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Redirected to http://localhost:3000/events/show/7
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/events/show/7" for 127.0.0.1 at 2018-03-07 10:34:26 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:34:28 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/show/7" for 127.0.0.1 at 2018-03-07 10:34:29 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:34:31 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:35:13 +0800
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/yumei.shih/Desktop/Practice/RoR/ruby-on-rails-simple-crud/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/yumei.shih/Desktop/Practice/RoR/ruby-on-rails-simple-crud/config/routes.rb:6)
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/edit/7" for 127.0.0.1 at 2018-03-07 10:35:14 +0800
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (1.4ms)
+  Rendered events/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/events/update/7" for 127.0.0.1 at 2018-03-07 10:35:18 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nIk7hArMDoTvubuMvSwSYCM5ZCJuOQZUu7AjwsCaQlO4SAT9cyP0GsBT9YZvizyHq9X+FLsEoTHP0+rf7X6snw==", "event"=>{"name"=>"", "description"=>"dcsdc"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (0.7ms)
+  Rendered events/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/events/update/7" for 127.0.0.1 at 2018-03-07 10:35:20 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lYfP8sH8lpdG1zoaEe3HzmuXYnV2T5FWZnmzPBkhjoCgn6Y20xjd/3S/9enVviMma9GeUduiQVM+XtCsLK8MIg==", "event"=>{"name"=>"sdcsdc", "description"=>"dcsdc"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "sdcsdc"], ["updated_at", "2018-03-07 02:35:20.930840"], ["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/show/7
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/events/show/7" for 127.0.0.1 at 2018-03-07 10:35:20 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:35:23 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/edit/7" for 127.0.0.1 at 2018-03-07 10:35:25 +0800
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (2.0ms)
+  Rendered events/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/events/update/7" for 127.0.0.1 at 2018-03-07 10:35:30 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2vUUqz4V5SmrUnJnic9FIeuTNo0DBaNNNAOnIHIccCr+NCvSR/oft4S4PG1baGvGY3+su9Y4BChAYG49X/ie5g==", "event"=>{"name"=>"", "description"=>"dcsdc"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (0.7ms)
+  Rendered events/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/events/update/7" for 127.0.0.1 at 2018-03-07 10:35:33 +0800
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1G2rCiCxgAuhb3QlnrsaeF5LB6fS0LpS1/TuSd3yza7hdcLOMlXLY5MHu9Za6P6QXg37g389aleP043Z6HxPDA==", "event"=>{"name"=>"kjhg", "description"=>"dcsdc"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "kjhg"], ["updated_at", "2018-03-07 02:35:33.406608"], ["id", 7]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/show/7
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/events/show/7" for 127.0.0.1 at 2018-03-07 10:35:33 +0800
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2018-03-07 10:35:34 +0800
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
